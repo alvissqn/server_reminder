@@ -6,8 +6,8 @@
       $date = $_POST["date_task"];
       $time = $_POST["time_task"];
       $mem = $_POST["member"];
-      
-     $result = mysql_query("INSERT INTO list_task(userid,titletask,content_task,date_task,time_task) VALUES('".$mem."','".$title."','".$content."','".$date."','".$time."')");
+      $device = "website";
+     $result = mysql_query("INSERT INTO list_task(userid,titletask,content_task,date_task,time_task,device) VALUES('".$mem."','".$title."','".$content."','".$date."','".$time."','".$device."')");
       if($result) {
         echo "<script>alert('Thêm Việc Thành Công');</script>";
         echo "<script>window.location='?act=dstask';</script>";

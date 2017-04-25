@@ -7,7 +7,8 @@ if( isset($_POST["congviec"]) && isset($_POST["noidung"]) && isset($_POST["ngay"
 	$ngay = convert_date($_POST["ngay"]);
 	$thoigian = $_POST["thoigian"];
 	$userid = $_POST["uid"];
-	$result = mysql_query("INSERT INTO list_task(userid, titletask, content_task, date_task, time_task) VALUES('".$userid."','".$congviec."','".$noidung."','".$ngay."','".$thoigian."')");
+	$thietbi = $_POST["device"];
+	$result = mysql_query("INSERT INTO list_task(userid, titletask, content_task, date_task, time_task, device) VALUES('".$userid."','".$congviec."','".$noidung."','".$ngay."','".$thoigian."','".$thietbi."')");
 
 	if($result) {
 		$queryId = mysql_query("Select * From list_task order by taskid DESC limit 0,1");

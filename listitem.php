@@ -16,6 +16,7 @@
 				$row["content_task"] = $r["content_task"];
 				$row["date_task"] = $r["date_task"];
 				$row["time_task"] = $r["time_task"];
+				$row["device"] = $r["device"];
 				array_push($response["answers"], $row);
 			}
 			echo json_encode($response);
